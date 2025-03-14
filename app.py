@@ -8,7 +8,7 @@ orderIdStatus = {
 
 app = Flask(__name__)
 
-@app.route("/message", methods=["POST"])
+@app.route("/block", methods=["POST"])
 def receive_message():
     data = request.get_json()
     if not data or "id" not in data:
