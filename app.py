@@ -31,7 +31,7 @@ def emailSend(userEmail,password, email_receiver, messageID):
         smtp.starttls()
         smtp.ehlo()
         link = f"https://blockdelivery-7bbb91161050.herokuapp.com/{messageID}"
-        bodyMsg = f"La direccion de entrega de la orden con ID {messageID} ha sido modificada.\nPara confirmar esta acción visite el siguiente link: {link}"
+        bodyMsg = f"La direccion de entrega de la orden con ID {messageID} ha sido modificada.\nPara confirmar esta accion visite el siguiente link: {link}"
         msg = f'Subject: Bloqueo de orden {messageID}\n\n{bodyMsg}'
 
         smtp.login(userEmail,password)
